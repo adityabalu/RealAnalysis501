@@ -1,0 +1,97 @@
+\documentclass[]{article}
+
+%opening
+\title{Math 501: Intro to Real Analysis\\Homework 1}
+\date{August 21, 2017}
+\author{Aditya Balu}
+\renewcommand{\theenumi}{\Alph{enumi}}
+\usepackage{enumitem}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+
+\begin{document}
+
+\maketitle
+
+\section* {Problem}
+
+Let $A, B, C$ be subsets of a set $\mathbf{S}$. Prove the following statements and illustrate them with diagrams.
+\begin{enumerate}[label=\alph*]
+	\item  $A^c \cup B^c$ = $(A \cap B)^c$
+	\item  $A \cap (B \cup C)$ = $(A \cap B)\cup(A \cap C)$
+	\item  $A \cup (B \cap C)$ = $(A \cup B)\cap(A \cup C)$
+\end{enumerate}
+
+\section* {Solution}
+\subsection*{(a)}
+
+\begin{align*}
+	\begin{split}
+		&\text{Let $x \in S$ be an element such that $x \in A^c \cup B^c$.}\\
+		\Rightarrow& x \notin A \quad or \quad x \notin B. \\
+		\Rightarrow& x \notin (A \cap B).\\
+		\therefore& x\in (A \cap B)^c.\\
+		\Rightarrow& A^c \cup B^c \subseteq (A\cap B)^c.\\
+	\end{split}\\
+	\begin{split}
+		&\text{Now, let  $y \in S$ be an element such that $y \in (A\cap B)^c$}\\
+		\Rightarrow& y \notin (A\cap B)\\
+		\Rightarrow& y \notin A \quad or \quad y \notin B\\
+		\Rightarrow& y \in A^c \quad or \quad y \in B^c\\
+		\Rightarrow& y \in A^c \cup B^c\\
+		\Rightarrow& (A \cap B)^c \subseteq A^c \cup B^c \\
+	\end{split}\\
+	\begin{split}
+		&Since,\quad A^c \cup B^c \subseteq (A\cap B)^c \quad and \quad (A \cap B)^c \subseteq A^c \cup B^c\\
+		&A^c \cup B^c = (A\cap B)^c
+	\end{split}	
+\end{align*}
+
+\subsection* {(b)}
+
+\begin{align*}
+	\begin{split}
+		&\text{Let $x \in S$ be an element such that $x \in A\cap (B \cup C)$.}\\
+		\Rightarrow& x \in A \quad and \quad x \in B \cup C\\
+		\Rightarrow& x \in A \quad and \quad x \in B \qquad or \qquad x \in A \quad and \quad x \in C\\ 
+		\Rightarrow& x \in A \cap B \quad or \quad x \in A \cap C\\
+		\Rightarrow& x \in (A \cap B) \cup (A \cap C)\\
+		\Rightarrow&  A\cap(B \cup C) \subseteq (A \cap B) \cup (A \cap C)\\
+	\end{split}\\
+	\begin{split}
+		&\text{Now, Let $x \in S$ be an element such that $x \in (A \cap B) \cup (A \cap C)$.}\\
+		\Rightarrow& x \in (A \cap B) \quad or \quad x \in (A \cap C)\\
+		\Rightarrow& x \in A \quad and \quad x \in B \qquad or \qquad x \in A \quad and \quad x \in C\\ 
+		\Rightarrow& x \in A \quad and \quad x \in B \cup C\\
+		\Rightarrow& x \in A \cap (B \cup C)\\
+		\Rightarrow& (A \cap B) \cup (A \cap C) \subseteq A\cap(B \cup C)\\
+		\therefore& (A \cap B) \cup (A \cap C) = A\cap(B \cup C)
+	\end{split}\\
+\end{align*}
+
+
+
+\subsection* {(c)}
+
+\begin{align*}
+	\begin{split}
+		&\text{Let $x \in S$ be an element such that $x \in A\cup (B \cap C)$.}\\
+		\Rightarrow& x \in A \quad or \quad x \in B \cap C\\
+		\Rightarrow& x \in A \quad or \quad x \in B \qquad and \qquad x \in A \quad or \quad x \in C\\ 
+		\Rightarrow& x \in A \cup B \quad and \quad x \in A \cup C\\
+		\Rightarrow& x \in (A \cup B) \cap (A \cup C)\\
+		\Rightarrow&  A\cup (B \cap C) \subseteq (A \cup B) \cap (A \cup C)\\
+	\end{split}\\
+	\begin{split}
+		&\text{Now, Let $x \in S$ be an element such that $x \in (A \cup B) \cap (A \cup C)$.}\\
+		\Rightarrow& x \in (A \cup B) \quad and \quad x \in (A \cup C)\\
+		\Rightarrow& x \in A \quad or \quad x \in B \qquad and \qquad x \in A \quad or \quad x \in C\\ 
+		\Rightarrow& x \in A \quad or \quad x \in B \cap C\\
+		\Rightarrow& x \in A \cup (B \cap C)\\
+		\Rightarrow& (A \cup B) \cap (A \cup C) \subseteq A\cup(B \cap C)\\
+		\therefore& (A \cup B) \cap (A \cup C) = A\cup(B \cap C)
+	\end{split}\\
+\end{align*}
+
+
+
+\end{document}
